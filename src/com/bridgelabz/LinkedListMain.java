@@ -28,5 +28,20 @@ package com.bridgelabz;
             linkedList2.append(30);
             linkedList2.append(70);
             linkedList2.display();
+
+            /*
+         UC4: Linked list Inserting the element 30.
+         */
+            LinkedList<Integer> linkedList3 = new LinkedList<>();
+            linkedList3.append(56);
+            linkedList3.append(70);
+            linkedList3.display();
+
+            boolean isInserted = linkedList3.insertAfter(56,30);
+            if (isInserted)
+                System.out.println("Element 30 is Inserted");
+            else
+                System.out.println("Element is NOt inserted");
+            linkedList3.display();
         }
     }
