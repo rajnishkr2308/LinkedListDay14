@@ -1,4 +1,18 @@
 package com.bridgelabz;
+    public class Node <T> {
+        /*
+           Initializing Data and Node using Generics
+         */
+        T data;
+        Node<T> next;
 
-public class Node {
-}
+        public Node() {
+        }
+        /*
+           Parameter Constructor
+         */
+        public Node(T data) {
+            this.data = data;
+        }
+    }
+
