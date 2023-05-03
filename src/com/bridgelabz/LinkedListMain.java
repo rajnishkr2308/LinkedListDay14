@@ -116,5 +116,20 @@ package com.bridgelabz;
             linkedList5.size();
             System.out.println("-------------------------------------");
 
+            /*
+         UC10: Linked list in Ascending Order.
+         */
+            SortedLinkedList sortedLinkedList =  new SortedLinkedList();
+            sortedLinkedList.add(56);
+            sortedLinkedList.add(30);
+            sortedLinkedList.add(40);
+            sortedLinkedList.add(70);
+            System.out.println("Before Sorting :-");
+            sortedLinkedList.display();
+            sortedLinkedList.sortedList();
+            System.out.println("After Sorting :-");
+            sortedLinkedList.display();
+            System.out.println("-------------------------------------");
+
         }
     }
