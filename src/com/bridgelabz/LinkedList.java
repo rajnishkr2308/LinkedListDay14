@@ -1,5 +1,5 @@
 package com.bridgelabz;
-public class LinkedList <T>{
+public class LinkedList <T> {
 
     Node<T> head;
     Node<T> tail;
@@ -30,16 +30,18 @@ public class LinkedList <T>{
         if (head == null) {
             head = newNode;
             tail = newNode;
-        }else {
+        } else {
             tail.next = newNode;
             tail = newNode;
         }
     }
+
     public Node<T> search(T searchData) {
         /*
          when temp node is head,and temp is not equal to null then its data equals to search data
          */
-        Node<T> temp = head;;
+        Node<T> temp = head;
+        ;
         while (temp != null) {
             if (temp.data.equals(searchData))
                 return temp;
@@ -47,6 +49,7 @@ public class LinkedList <T>{
         }
         return null; //when temp = null;
     }
+
     public boolean insertAfter(T searchData, T insertData) {
         /*
          * After searching the node the new node is inserted next ot it.
@@ -60,6 +63,7 @@ public class LinkedList <T>{
         }
         return false;
     }
+
     public void display() {
         /*
         Display the linked list
@@ -73,15 +77,31 @@ public class LinkedList <T>{
         System.out.println();
     }
 
-        public T pop () {
+    public T pop() {
             /*
               Deleting the first Element
             */
-            if (head == null)
-                return null;
-            T popData = head.data;  //first element
-            head = head.next;
-            return popData;
-        }
+        if (head == null)
+            return null;
+        T popData = head.data;  //first element
+        head = head.next;
+        return popData;
     }
+
+    public T popLast() {
+         /*
+           Deleting the Last Element
+         */
+        if (head == null)
+            return null;
+        T popLastData = tail.data;  //last element
+        Node<T> temp = head;
+        while (temp.next != tail) {
+            temp = temp.next;      //Second last element is converting to null using while loop
+        }
+        temp.next = null;
+        tail = temp;
+        return popLastData;
+    }
+}
 
