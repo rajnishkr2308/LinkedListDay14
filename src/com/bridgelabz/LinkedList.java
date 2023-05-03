@@ -64,12 +64,24 @@ public class LinkedList <T>{
         /*
         Display the linked list
          */
-        Node<T> temp = head;;
+        Node<T> temp = head;
+        ;
         while (temp != null) {
-            System.out.print(temp.data+ " -> ");
+            System.out.print(temp.data + " -> ");
             temp = temp.next;
         }
         System.out.println();
     }
-}
+
+        public T pop () {
+            /*
+              Deleting the first Element
+            */
+            if (head == null)
+                return null;
+            T popData = head.data;  //first element
+            head = head.next;
+            return popData;
+        }
+    }
 
