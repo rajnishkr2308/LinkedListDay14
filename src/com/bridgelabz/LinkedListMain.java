@@ -102,5 +102,19 @@ package com.bridgelabz;
             linkedList5.display();
             System.out.println("-------------------------------------");
 
+            /*
+         UC9: Delete the value 40 and size of the Linked list.
+         */
+            linkedList5.display();
+
+            Node<Integer> deletedData = linkedList5.delete(40);
+            if (deletedData == null)
+                System.out.println("Element is Deleted");
+            else
+                System.out.println("Element is NOT FOUND");
+            linkedList5.display();
+            linkedList5.size();
+            System.out.println("-------------------------------------");
+
         }
     }
